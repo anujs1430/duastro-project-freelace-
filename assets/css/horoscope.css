@@ -1,0 +1,196 @@
+@import url("style.css");
+
+body {
+    margin-bottom: 10rem;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.horoscrope-hero {
+    background: linear-gradient(138deg, rgba(255, 204, 51, 1) 30%, rgba(253, 126, 20, 1) 100%);
+    width: 100%;
+    padding: 3rem 0;
+}
+
+.horoscrope-hero-contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.horoscrope-hero-contents h4 {
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+.horoscrope-hero-contents img {
+    animation: spin 20s linear infinite;
+}
+
+.breadcrumb-item a {
+    color: var(--dark)
+}
+
+.breadcrumb-item.active {
+    color: var(--yellow) !important;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#v-pills-tab {
+    border: 1px solid var(--lightGrey);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#v-pills-tab .nav-link.active {
+    background: var(--yellow);
+    color: var(--black);
+    border-radius: 5px;
+}
+
+#v-pills-tab .nav-link {
+    color: var(--darkGrey);
+    border-bottom: 1px solid var(--lightGrey);
+    border-radius: 0;
+    transition: all 0.4s;
+}
+
+#v-pills-tab .nav-link:hover {
+    margin-left: 5px;
+    transition: all 0.4s;
+}
+
+.bg-light-danger {
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgb(247 177 184);
+    height: 90px;
+}
+
+.bg-light-yellow {
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgb(247, 241, 177);
+    height: 90px;
+}
+
+.bg-light-primary {
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: rgb(178, 177, 247);
+    height: 90px;
+}
+
+.red-dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: var(--red);
+    display: block
+}
+
+.yellow-dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: var(--darkGreen);
+    display: block
+}
+
+.lucky-items-box {
+    width: 400px;
+    /* height: 30px; */
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.love {
+    border: 1px solid var(--red);
+    cursor: pointer;
+}
+
+.love:hover {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.love .bi {
+    color: var(--red);
+}
+
+.health {
+    border: 1px solid var(--darkGrey);
+    cursor: pointer;
+}
+
+.health:hover {
+    background-color: var(--darkGrey);
+    color: var(--white);
+}
+
+.health .bi {
+    color: var(--darkGrey);
+}
+
+.career {
+    border: 1px solid var(--orange);
+    cursor: pointer;
+}
+
+.career:hover {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.career .bi {
+    color: var(--orange);
+}
+
+.emotion {
+    border: 1px solid var(--yellow);
+    cursor: pointer;
+}
+
+.emotion:hover {
+    background-color: var(--yellow);
+    color: var(--white);
+}
+
+.emotion .bi {
+    color: var(--yellow);
+}
+
+.travel {
+    border: 1px solid var(--darkGreen);
+    cursor: pointer;
+}
+
+.travel:hover {
+    background-color: var(--darkGreen);
+    color: var(--white);
+}
+
+.travel .bi {
+    color: var(--darkGreen);
+}
+
+
+.lucky-item-decription {
+    border: 1px solid var(--red);
+    border-radius: 10px;
+    padding: 10px;
+    max-height: 148px;
+    overflow-y: auto;
+}
