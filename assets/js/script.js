@@ -1,3 +1,4 @@
+//========= OWL CAROUSEL :- INDEX PAGE =========
 $(function () {
   // Owl Carousel
   var owl = $(".owl-carousel");
@@ -33,18 +34,19 @@ $(function () {
     },
   });
 });
+//========= OWL CAROUSEL :- INDEX PAGE =========
 
-// HOROSCROPE PAGE:- LUCKY ITEMS FOR YOU
+//========== HOROSCROPE PAGE:- LUCKY ITEMS FOR YOU ==============
 $(document).ready(function () {
   // Initially hide all descriptions except the active one
   $(".lucky-description").hide();
-  $(".love-description").show(); // Show 'love' content by default
+  $(".love-description").show();
 
   // by default background and color set on love box
   $(".love").css({
-    "background-color": "#f00", // Red background for love
-    color: "#fff", // White text for love
-    border: "2px solid #f00", // Optional: red border for love
+    "background-color": "#f00",
+    color: "#fff",
+    border: "2px solid #f00",
   });
 
   // Click event for each lucky-items-box
@@ -72,37 +74,37 @@ $(document).ready(function () {
     // Apply different CSS based on the item
     if (item === "love") {
       $(this).css({
-        "background-color": "#f00", // Red background for love
-        color: "#fff", // White text for love
+        "background-color": "#f00",
+        color: "#fff",
       });
     } else if (item === "health") {
       $(this).css({
-        "background-color": "#454545", // Green background for health
-        color: "#fff", // White text for health
+        "background-color": "#454545",
+        color: "#fff",
       });
       $(".lucky-item-decription").css({
         border: "1px solid #454545",
       });
     } else if (item === "career") {
       $(this).css({
-        "background-color": "#fd7e14", // Yellow background for career
-        color: "#fff", // Black text for career
+        "background-color": "#fd7e14",
+        color: "#fff",
       });
       $(".lucky-item-decription").css({
         border: "1px solid #fd7e14",
       });
     } else if (item === "emotion") {
       $(this).css({
-        "background-color": "#ffcc33", // Blue background for emotion
-        color: "#fff", // White text for emotion
+        "background-color": "#ffcc33",
+        color: "#fff",
       });
       $(".lucky-item-decription").css({
         border: "1px solid #ffcc33",
       });
     } else if (item === "travel") {
       $(this).css({
-        "background-color": "#258f01", // Gray background for travel
-        color: "#fff", // White text for travel
+        "background-color": "#258f01",
+        color: "#fff",
       });
       $(".lucky-item-decription").css({
         border: "1px solid #258f01",
@@ -110,3 +112,26 @@ $(document).ready(function () {
     }
   });
 });
+//================= HOROSCROPE PAGE:- LUCKY ITEMS FOR YOU ===================
+
+//========== FUNCTION FOR CATEGORIES SHOW ACRRODING TO THE NAV CATEGORY ITEMS:-BLOG PAGE=======
+$(document).ready(function () {
+  $(".category-description").hide().eq(0).show();
+
+  $(".category").click(function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow"); //onclick at category nav links scroll on the top
+
+    let category = $(this).attr("data-item");
+    console.log(category);
+
+    $(".category").removeClass("ms-3");
+    $(this).addClass("ms-3");
+
+    $(".category-description").hide();
+
+    $(`.category-description[data-item=${category}]`).fadeIn();
+  });
+  console.log("ready");
+  $(".category").eq(0).addClass("ms-3");
+});
+//=========== FUNCTION FOR CATEGORIES SHOW ACRRODING TO THE NAV CATEGORY ITEMS:-BLOG PAGE =========

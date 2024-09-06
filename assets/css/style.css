@@ -35,6 +35,7 @@ body::-webkit-scrollbar-thumb:hover {
     --yellow: #ffcc33;
     --red: #f00;
     --white: #fff;
+    --offWhite: rgb(248 249 250);
     --green: #34C105;
     --darkGreen: #258f01;
     --darkGrey: #454545;

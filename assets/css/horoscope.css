@@ -1,9 +1,5 @@
 @import url("style.css");
 
-body {
-    margin-bottom: 10rem;
-}
-
 .w-30 {
     width: 30%;
 }
@@ -193,4 +189,8 @@ body {
     padding: 10px;
     max-height: 148px;
     overflow-y: auto;
+}
+
+.faq {
+    background-color: var(--yellow);
 }
