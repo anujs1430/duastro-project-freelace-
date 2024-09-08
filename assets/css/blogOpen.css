@@ -1,0 +1,26 @@
+@import url('style.css');
+@import url('horoscope.css');
+@import url('blog.css');
+
+
+.dotted-border-left-1 {
+    border-left: 1px dotted var(--darkGrey);
+    padding: 0 0 0 15px;
+    height: 100%;
+}
+
+.blogopen-banner {
+    max-height: 250px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    object-fit: cover;
+}
+
+.custom-card-head {
+    background-color: #000;
+    border-radius: 0 35px 0 0;
+    text-align: center;
+    padding: 0px;
+    overflow: hidden;
+}

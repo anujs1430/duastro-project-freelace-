@@ -41,6 +41,7 @@ ol {
 
 .categories .card {
     box-shadow: 0px 1px 14px 0px #2b2b2b70;
+    transition: all 0.4s;
 }
 
 .categories-search {
@@ -57,4 +58,9 @@ i.position-absolute.bi.bi-search {
 
 .get-in-touch {
     background-color: var(--yellow);
+}
+
+.categories .card:hover {
+    transform: scale(1.02);
+    transition: all 0.4s;
 }
