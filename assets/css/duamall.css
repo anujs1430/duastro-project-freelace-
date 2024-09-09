@@ -1,0 +1,77 @@
+@import url('style.css');
+@import url('horoscope.css');
+@import url('blog.css');
+@import url('blogOpen.css');
+
+
+.astromall-products .card-img-overlay {
+    position: absolute;
+    right: 0;
+    top: auto;
+    padding: 6px !important;
+    backdrop-filter: brightness(0.5);
+    bottom: 0;
+    left: 0;
+    padding: var(--bs-card-img-overlay-padding);
+    border-radius: var(--bs-card-inner-border-radius);
+}
+
+.astromall-products .customo-overlay {
+    top: 0;
+    backdrop-filter: none;
+    background: linear-gradient(138deg, rgba(255, 204, 51, 1) 30%, rgba(253, 126, 20, 1) 100%);
+    height: fit-content;
+    width: fit-content;
+    font-size: 12px;
+    padding: 2px !important;
+    border-radius: 0 16px 15px 0;
+}
+
+.astromall-products .card {
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.astromall-products .card:hover {
+    transform: scale(1.02);
+    transition: 0.4s;
+}
+
+.astromall-search {
+    width: 50%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.astromall-search input {
+    font-size: 12px;
+    border-radius: 30px 0 0 30px;
+    border: 1px solid var(--orange);
+    outline: none;
+}
+
+
+.astromall-search input::placeholder {
+    color: var(--orange);
+}
+
+.astromall-search button.btn {
+    background-color: var(--orange);
+    color: #fff;
+    border-radius: 0 30px 30px 0;
+    font-size: 12px;
+}
+
+.free-kundali {
+    background-color: var(--yellow);
+    padding: 3rem;
+}
+
+.free-kundali .card img {
+    width: 150px;
+    margin: auto;
+    min-height: 140px;
+    max-height: 140px;
+    object-fit: contain;
+}

@@ -135,3 +135,31 @@ $(document).ready(function () {
   $(".category").eq(0).addClass("ms-3");
 });
 //=========== FUNCTION FOR CATEGORIES SHOW ACRRODING TO THE NAV CATEGORY ITEMS:-BLOG PAGE =========
+
+// CHNAGE IMAGES BY CLICKING IN PRODUCT PAGE
+$(document).ready(function () {
+  $(".product-imgs").click(function () {
+    const imgSrc = $(this).attr("src");
+    $(".main-showing-img").attr("src", imgSrc);
+
+    // ADDING SHOW CLASS WHERE I CLICKED REST REMOVE
+    $(".product-imgs").removeClass("show");
+    $(this).addClass("show");
+  });
+});
+// CHNAGE IMAGES BY CLICKING IN PRODUCT PAGE
+
+//FUNCTION FOR READ LESS AND READ MORE IN PRODUCT DETAILS PAGE
+$(document).ready(function () {
+  $(".more-text").hide();
+  $(".readMore-btn").click(function () {
+    $(".more-text").toggle();
+    const text = $(this).html();
+    const down = '<i class="bi bi-chevron-down"></i>';
+    const up = '<i class="bi bi-chevron-up"></i>';
+    $(".readMore-btn").html(
+      text === `Read More ${down}` ? `Read Less ${up}` : `Read More ${down}`
+    );
+  });
+});
+//FUNCTION FOR READ LESS AND READ MORE IN PRODUCT DETAILS PAGE
