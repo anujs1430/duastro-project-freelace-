@@ -1,0 +1,58 @@
+@import url('onlinePooja.css');
+
+.horoscrope-hero-contents img {
+    animation: none;
+}
+
+.cards-group {
+    background: linear-gradient(138deg, rgba(255, 204, 51, 1) 30%, rgba(253, 126, 20, 1) 100%);
+}
+
+.step {
+    border-radius: 100%;
+    border: 1px solid var(--darkGrey);
+    background-color: var(--yellow);
+    display: grid;
+    place-content: center;
+    height: 100px;
+    min-width: 100px;
+}
+
+.happy-customers .carousel-indicators {
+    margin-bottom: -1rem;
+    filter: brightness(0.5);
+}
+
+.review-cards-group {
+    background: var(--yellow);
+}
+
+.review-card {
+    position: relative;
+    height: fit-content;
+    background: transparent;
+    box-shadow: none;
+    border: 4px solid var(--white);
+    border-radius: 34px;
+}
+
+.bi-quote {
+    position: absolute;
+    top: -19px;
+    left: -7px;
+    width: 42px;
+    font-size: 2rem;
+    background: #ffcc34;
+}
+
+button.accordion-button.collapsed {
+    background: var(--grediant-color);
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--grediant-color);
+}
+
+.accordion-body {
+    background: var(--yellow);
+}

@@ -163,7 +163,7 @@ img.product-imgs.show {
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .scrolling-nav .nav-pills .nav-link {
@@ -187,4 +187,12 @@ img.product-imgs.show {
 
 #scrollspyHeading3 {
     background-color: var(--yellow);
+}
+
+.review-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 9px 10px #2b2b2b70;
+    margin-top: 1rem;
 }

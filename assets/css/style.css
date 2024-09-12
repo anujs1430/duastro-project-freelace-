@@ -40,6 +40,7 @@ body::-webkit-scrollbar-thumb:hover {
     --darkGreen: #258f01;
     --darkGrey: #454545;
     --lightGrey: #cecece;
+    --grediant-color: linear-gradient(138deg, rgba(255, 204, 51, 1) 30%, rgba(253, 126, 20, 1) 100%);
 }
 
 .mt-7rem {
@@ -56,6 +57,10 @@ ul {
 
 li {
     list-style: none;
+}
+
+p {
+    margin: 0;
 }
 
 .dropdown-menu {
