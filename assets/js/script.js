@@ -35,7 +35,10 @@ $(function () {
   });
 });
 //========= OWL CAROUSEL :- INDEX PAGE =========
-
+//
+//
+//
+//
 //========== HOROSCROPE PAGE:- LUCKY ITEMS FOR YOU ==============
 $(document).ready(function () {
   // Initially hide all descriptions except the active one
@@ -113,13 +116,19 @@ $(document).ready(function () {
   });
 });
 //================= HOROSCROPE PAGE:- LUCKY ITEMS FOR YOU ===================
-
+//
+//
+//
+//
 //========== FUNCTION FOR CATEGORIES SHOW ACRRODING TO THE NAV CATEGORY ITEMS:-BLOG PAGE=======
 $(document).ready(function () {
   $(".category-description").hide().eq(0).show();
 
   $(".category").click(function () {
     $("html, body").animate({ scrollTop: 0 }, "slow"); //onclick at category nav links scroll on the top
+    if ($(window).width() <= 500) {
+      $(".category-nav-items").fadeOut();
+    }
 
     let category = $(this).attr("data-item");
     console.log(category);
@@ -135,7 +144,10 @@ $(document).ready(function () {
   $(".category").eq(0).addClass("ms-3");
 });
 //=========== FUNCTION FOR CATEGORIES SHOW ACRRODING TO THE NAV CATEGORY ITEMS:-BLOG PAGE =========
-
+//
+//
+//
+//
 // CHNAGE IMAGES BY CLICKING IN PRODUCT PAGE
 $(document).ready(function () {
   $(".product-imgs").click(function () {
@@ -148,7 +160,10 @@ $(document).ready(function () {
   });
 });
 // CHNAGE IMAGES BY CLICKING IN PRODUCT PAGE
-
+//
+//
+//
+//
 //FUNCTION FOR READ LESS AND READ MORE IN PRODUCT DETAILS PAGE
 $(document).ready(function () {
   $(".more-text").hide();
@@ -163,3 +178,106 @@ $(document).ready(function () {
   });
 });
 //FUNCTION FOR READ LESS AND READ MORE IN PRODUCT DETAILS PAGE
+//
+//
+//
+//
+//====== FUNCITON FOR MULIT LEVEL FORM IN CONSULTANT PAGE=====
+/**
+ * Define a function to navigate betweens form steps.
+ * It accepts one parameter. That is - step number.
+ */
+const navigateToFormStep = (stepNumber) => {
+  /**
+   * Hide all form steps.
+   */
+  document.querySelectorAll(".form-step").forEach((formStepElement) => {
+    formStepElement.classList.add("d-none");
+  });
+  /**
+   * Mark all form steps as unfinished.
+   */
+  document.querySelectorAll(".form-stepper-list").forEach((formStepHeader) => {
+    formStepHeader.classList.add("form-stepper-unfinished");
+    formStepHeader.classList.remove(
+      "form-stepper-active",
+      "form-stepper-completed"
+    );
+  });
+  /**
+   * Show the current form step (as passed to the function).
+   */
+  document.querySelector("#step-" + stepNumber).classList.remove("d-none");
+  /**
+   * Select the form step circle (progress bar).
+   */
+  const formStepCircle = document.querySelector(
+    'li[step="' + stepNumber + '"]'
+  );
+  /**
+   * Mark the current form step as active.
+   */
+  formStepCircle.classList.remove(
+    "form-stepper-unfinished",
+    "form-stepper-completed"
+  );
+  formStepCircle.classList.add("form-stepper-active");
+  /**
+   * Loop through each form step circles.
+   * This loop will continue up to the current step number.
+   * Example: If the current step is 3,
+   * then the loop will perform operations for step 1 and 2.
+   */
+  for (let index = 0; index < stepNumber; index++) {
+    /**
+     * Select the form step circle (progress bar).
+     */
+    const formStepCircle = document.querySelector('li[step="' + index + '"]');
+    /**
+     * Check if the element exist. If yes, then proceed.
+     */
+    if (formStepCircle) {
+      /**
+       * Mark the form step as completed.
+       */
+      formStepCircle.classList.remove(
+        "form-stepper-unfinished",
+        "form-stepper-active"
+      );
+      formStepCircle.classList.add("form-stepper-completed");
+    }
+  }
+};
+/**
+ * Select all form navigation buttons, and loop through them.
+ */
+document
+  .querySelectorAll(".btn-navigate-form-step")
+  .forEach((formNavigationBtn) => {
+    /**
+     * Add a click event listener to the button.
+     */
+    formNavigationBtn.addEventListener("click", () => {
+      /**
+       * Get the value of the step.
+       */
+      const stepNumber = parseInt(
+        formNavigationBtn.getAttribute("step_number")
+      );
+      /**
+       * Call the function to navigate to the target form step.
+       */
+      navigateToFormStep(stepNumber);
+    });
+  });
+//====== FUNCITON FOR MULIT LEVEL FORM IN CONSULTANT PAGE ============
+//
+//
+//
+//
+// IN BLOG PAGE 'category-nav-items' WILL BE HIDE IN MOBILE ONLY (PAGE BLOG)
+$(document).ready(function () {
+  $(".bi-list").click(function () {
+    $(".category-nav-items").fadeToggle();
+  });
+});

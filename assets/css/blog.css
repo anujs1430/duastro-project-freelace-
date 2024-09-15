@@ -64,3 +64,21 @@ i.position-absolute.bi.bi-search {
     transform: scale(1.02);
     transition: all 0.4s;
 }
+
+.open-categories-btn-for-sm {
+    display: none;
+}
+
+@media only screen and (min-width: 320px) and (max-width:500px) {
+
+    .open-categories-btn-for-sm {
+        display: block;
+        margin-left: auto;
+        padding: 1rem;
+        cursor: pointer;
+    }
+
+    .category-nav-items {
+        display: none;
+    }
+}

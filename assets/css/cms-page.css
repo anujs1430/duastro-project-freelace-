@@ -1,0 +1,13 @@
+@import url('callChat.css');
+@import url('onlinePooja.css');
+
+
+.breadcrumb-item a {
+    color: var(--dark);
+}
+
+.connect-with-astrologer {
+    background-color: var(--yellow);
+    text-align: center;
+    padding: 3rem 0;
+}

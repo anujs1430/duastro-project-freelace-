@@ -1,0 +1,27 @@
+@import url('about.css');
+
+input.form-control,
+textarea.form-control {
+    background-color: var(--lightGrey);
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.form-select {
+    background-color: var(--lightGrey);
+    font-size: 14px;
+}
+
+.form-control::placeholder {
+    color: var(--darkGrey);
+}
+
+.tell-us .card {
+    margin-top: 1rem;
+    background-color: var(--offWhite);
+    padding: 1rem;
+    box-shadow: 0px 1px 14px 0px #2b2b2b70;
+
+}
