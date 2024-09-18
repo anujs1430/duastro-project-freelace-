@@ -81,4 +81,10 @@ i.position-absolute.bi.bi-search {
     .category-nav-items {
         display: none;
     }
+
+    .categories-search {
+        font-size: 1rem;
+        border: 1px solid var(--darkOrange);
+        margin-top: 1rem;
+    }
 }
