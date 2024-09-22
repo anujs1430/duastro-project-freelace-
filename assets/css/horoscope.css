@@ -11,7 +11,7 @@
 .horoscrope-hero {
     background: linear-gradient(138deg, rgba(255, 204, 51, 1) 30%, rgba(253, 126, 20, 1) 100%);
     width: 100%;
-    padding: 3rem 0;
+    padding: 1rem 0;
 }
 
 .horoscrope-hero-contents {
@@ -192,6 +192,18 @@
 }
 
 .faq {
+    background-color: var(--yellow);
+}
+
+button.accordion-button.collapsed {
+    background: var(--grediant-color);
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--grediant-color);
+}
+
+.accordion-body {
     background-color: var(--yellow);
 }
 

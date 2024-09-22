@@ -269,10 +269,22 @@ nav.navbar {
 }
 
 .custom-card-body {
-    padding: 10px;
+    padding: 20px;
 }
 
 .understanding-astrology {
+    background-color: var(--yellow);
+}
+
+button.accordion-button.collapsed {
+    background: var(--grediant-color);
+}
+
+.accordion-button:not(.collapsed) {
+    background: var(--grediant-color);
+}
+
+.accordion-body {
     background-color: var(--yellow);
 }
 
