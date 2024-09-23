@@ -32,7 +32,7 @@ body::-webkit-scrollbar-thumb:hover {
 :root {
     --orange: #fd7e14;
     --darkOrange: #d46001;
-    --yellow: #ffcc33;
+    --yellow: #d29400;
     --red: #f00;
     --white: #fff;
     --offWhite: rgb(248 249 250);
@@ -362,7 +362,97 @@ i.bi-chevron-right {
 
 /* OWL CAROUSEL NAVIGATION ICON CSS */
 
+/* floating btn css */
+.flating-download {
+    position: fixed;
+    right: -100px;
+    z-index: 999;
+    background: var(--orange);
+    color: #fff;
+    bottom: 140px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    transition: 0.5s all;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    animation: mymove 5s infinite;
+}
 
+.flating-download:hover {
+    right: 0px;
+}
+
+.foating-btn-icon {
+    width: 32px;
+    margin-right: 8px;
+    object-fit: contain;
+    border-radius: 100%;
+}
+
+@keyframes mymove {
+    0% {
+        background: var(--darkGreen);
+        color: var(--darkGrey) !important;
+
+    }
+
+    25% {
+        background: var(--darkOrange);
+        color: var(--white) !important;
+
+    }
+
+    50% {
+        background: var(--red);
+        color: var(--darkGrey) !important;
+
+    }
+
+    75% {
+        background: var(--yellow);
+        color: var(--white) !important;
+
+    }
+
+    100% {
+        background: var(--darkGrey);
+        color: var(--white) !important;
+
+    }
+}
+
+/* floating btn css */
+
+
+/* modal form css */
+input {
+    border: none;
+    border-bottom: 1px solid var(--orange);
+    width: 100%;
+    padding: 3px 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+input::placeholder {
+    color: #d4600189;
+}
+
+.modal form button {
+    padding: 5px 15px;
+    border: none;
+    font-size: 14px;
+    margin: auto;
+    text-align: center;
+    display: block;
+    background: var(--grediant-color);
+    font-weight: 600;
+    border-radius: 7px;
+}
+
+/* modal form css */
 
 
 
