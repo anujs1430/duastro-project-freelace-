@@ -56,3 +56,54 @@ button.accordion-button.collapsed {
 .accordion-body {
     background: var(--yellow);
 }
+
+.fixed-bottom {
+    background-color: var(--yellow);
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.fixed-bottom button {
+    background: var(--grediant-color);
+    padding: 10px 40px;
+    color: var(--white);
+    border: none;
+    animation: move 5s infinite;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+@keyframes move {
+    0% {
+        background: var(--darkGreen);
+        color: var(--darkGrey) !important;
+        transform: translateX(0);
+
+    }
+
+    25% {
+        background: var(--darkOrange);
+        color: var(--white) !important;
+
+    }
+
+    50% {
+        background: var(--red);
+        color: var(--darkGrey) !important;
+        transform: translate(50px);
+
+    }
+
+    75% {
+        background: var(--yellow);
+        color: var(--white) !important;
+
+    }
+
+    100% {
+        background: var(--darkGrey);
+        color: var(--white) !important;
+        transform: translate(0px);
+    }
+}
