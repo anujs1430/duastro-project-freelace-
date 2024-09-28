@@ -112,9 +112,9 @@ a {
 
 .btn-outline-secondary {
     border-radius: 0px;
-    width: 100px;
     padding: 10px;
 }
+
 
 .btn-check:checked+.btn,
 .btn.active,
@@ -495,6 +495,13 @@ input::placeholder {
 
 .modal-header {
     background-color: var(--yellow);
+}
+
+
+.modal .btn-outline-secondary {
+    border-radius: 0px;
+    width: 100px;
+    padding: 10px;
 }
 
 /*================ modal form css ================== */
