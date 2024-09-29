@@ -460,7 +460,7 @@ input::placeholder {
     color: var(--lightGrey);
 }
 
-.modal form button {
+.modal form a.btn {
     padding: 10px 15px;
     border: none;
     font-size: 14px;
