@@ -335,7 +335,7 @@ $(".signin").on("click", function () {
     $(".move").css("background-position", "left");
 
     setTimeout(function () {
-      $(".title").text("Create Account");
+      $(".title").text("Login Form");
       $(".light").text("Or use your email for registration");
       $(".name").show();
       $(".p-button").text("SIGN UP");
@@ -353,3 +353,8 @@ $(".signin").on("click", function () {
   }
 });
 // ===========Log in sign up form
+
+$(".kundali-result-page .category").on("click", function () {
+  $(".category").removeClass("active-orange");
+  $(this).addClass("active-orange");
+});
