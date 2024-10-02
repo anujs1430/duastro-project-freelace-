@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <header class="container top-nav">
+    <header class="container py-4">
         <div class="d-flex justify-content-between">
             <div class="w-50">
                 <img src="./assets/img/duastrologo.webp" alt="brand-logo" width="40%">
@@ -42,6 +42,9 @@
                 <!-- Categories button -->
                 <div class="col-lg-12">
                     <aside class="">
+                        <div class="open-categories-btn-for-sm">
+                            <i class="bi bi-list h1"></i>
+                        </div>
                         <div class="category-nav-items">
                             <ol>
                                 <li class="category active-orange" data-item="basic-details">Basic Details</li>
@@ -66,7 +69,7 @@
                                 <div class="card-header">
                                     <h3>Basic Details-</h3>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body table-responsive">
                                     <table class="table table-striped" border>
                                         <tbody>
                                             <tr>
@@ -119,7 +122,7 @@
                                 <div class="card-header">
                                     <h3>Basic Panchang Details - </h3>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body table-responsive">
                                     <table class="table table-striped" border>
                                         <tbody>
                                             <tr>
@@ -152,7 +155,7 @@
                                 <div class="card-header">
                                     <h3>Avakhada Details - </h3>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body table-responsive">
                                     <table class="table table-striped" border>
                                         <tbody>
                                             <tr>
@@ -232,7 +235,7 @@
                                 <div class="card-header">
                                     <h3>Planet Position - </h3>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body table-responsive">
                                     <table class="table">
                                         <thead class="table-dark">
                                             <tr>
@@ -270,7 +273,7 @@
                                 <div class="card-header">
                                     <h3>Basic Panchang Details - </h3>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body table-responsive">
                                     <table class="table table-striped" border>
                                         <tbody>
                                             <tr>
@@ -307,7 +310,7 @@
                                 <div class="card-header">
                                     <h3>Avakhada Details - </h3>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body table-responsive">
                                     <table class="table table-striped" border>
                                         <tbody>
                                             <tr>
@@ -388,7 +391,7 @@
                                 <div class="card-header">
                                     <h3>Planet Position - </h3>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body table-responsive">
                                     <table class="table">
                                         <thead class="table-dark">
                                             <tr>
@@ -426,7 +429,7 @@
                                 <div class="card-header">
                                     <h3>Basic Details- (short-life-summary)</h3>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body table-responsive">
                                     <table class="table table-striped" border>
                                         <tbody>
                                             <tr>
@@ -479,7 +482,7 @@
                                 <div class="card-header">
                                     <h3>Basic Panchang Details - </h3>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body table-responsive">
                                     <table class="table table-striped" border>
                                         <tbody>
                                             <tr>
@@ -512,7 +515,7 @@
                                 <div class="card-header">
                                     <h3>Avakhada Details - </h3>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body table-responsive">
                                     <table class="table table-striped" border>
                                         <tbody>
                                             <tr>
@@ -592,7 +595,7 @@
                                 <div class="card-header">
                                     <h3>Planet Position - </h3>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body table-responsive">
                                     <table class="table">
                                         <thead class="table-dark">
                                             <tr>
@@ -656,7 +659,7 @@
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse"
                                 data-bs-parent="#accordionExample">
-                                <div class="accordion-body bg-light">
+                                <div class="accordion-body bg-light table-responsive">
                                     <table class="table">
                                         <thead class="table-dark">
                                             <tr>
@@ -684,47 +687,49 @@
                     <!-- Personal Details Dropdown -->
 
                     <!-- payment Dtails -->
-                    <h4 class="text-center sub-heading mt-3">Payment <span class="text-orange">Details</span></h4>
-                    <div class="col-lg-8">
-                        <div class="row">
-                            <div class="col-lg-6 mt-3">
-                                <div>
-                                    <b>HoroScope Variant: </b>
+                    <div>
+                        <h4 class="text-center sub-heading mt-3">Payment <span class="text-orange">Details</span></h4>
+                        <div class="col-lg-8">
+                            <div class="row">
+                                <div class="col-lg-6 mt-3 w-50">
+                                    <div>
+                                        <b>HoroScope Variant: </b>
+                                    </div>
+                                    <div>
+                                        <b>Product Price: </b>
+                                    </div>
+                                    <div class="text-success">
+                                        <b>Discount: </b>
+                                    </div>
+                                    <div>
+                                        <b>Discounted Amount: </b>
+                                    </div>
+                                    <div class="text-orange">
+                                        <b>GST (18%): </b>
+                                    </div>
+                                    <div>
+                                        <h5><b>Payable Amount: </b></h5>
+                                    </div>
                                 </div>
-                                <div>
-                                    <b>Product Price: </b>
-                                </div>
-                                <div class="text-success">
-                                    <b>Discount: </b>
-                                </div>
-                                <div>
-                                    <b>Discounted Amount: </b>
-                                </div>
-                                <div class="text-orange">
-                                    <b>GST (18%): </b>
-                                </div>
-                                <div>
-                                    <h5><b>Payable Amount: </b></h5>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 mt-3">
-                                <div>
-                                    PDF Only
-                                </div>
-                                <div>
-                                    ₹ 2100.00
-                                </div>
-                                <div class="text-success">
-                                    ₹ 1100.00
-                                </div>
-                                <div>
-                                    ₹ 909.00
-                                </div>
-                                <div class="text-orange">
-                                    ₹ 200.00
-                                </div>
-                                <div>
-                                    <h5><b>₹ 1199/-</b></h5>
+                                <div class="col-lg-6 mt-3 w-50">
+                                    <div>
+                                        PDF Only
+                                    </div>
+                                    <div>
+                                        ₹ 2100.00
+                                    </div>
+                                    <div class="text-success">
+                                        ₹ 1100.00
+                                    </div>
+                                    <div>
+                                        ₹ 909.00
+                                    </div>
+                                    <div class="text-orange">
+                                        ₹ 200.00
+                                    </div>
+                                    <div>
+                                        <h5><b>₹ 1199/-</b></h5>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -732,47 +737,50 @@
                     <!-- payment Dtails -->
 
                     <!-- Payment Mode -->
-                    <h4 class="text-center sub-heading mt-3">Select Payment <span class="text-orange">Mode</span></h4>
-                    <div class="row mt-3">
-                        <div class="col-lg-4 mt-2">
-                            <button class="btn btn-outline-secondary w-100 rounded-3"><img
-                                    src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png"
-                                    alt="Google-icon" style="width: 20px;"> Pay</button>
-                        </div>
-                        <div class="col-lg-4 mt-2">
-                            <button class="btn btn-theme w-100 rounded-3">
-                                <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/upi_logo_icon_169316.png"
-                                    alt="" style="width: 60px; filter: brightness(0.5);">
-                            </button>
-                        </div>
-                        <div class="col-lg-4 mt-2">
-                            <button class="btn btn-theme w-100 rounded-3"
-                                style="font-size: 21px; background-color: #042e6f; border: none;">
-                                Paytm
-                            </button>
-                        </div>
-                        <div class="col-lg-4 mt-2">
-                            <button class="btn btn-success w-100 rounded-3" style="font-size: 20px;">
-                                Credit or Debit Card
-                            </button>
-                        </div>
-                        <div class="col-lg-4 mt-2">
-                            <button class="btn btn-success w-100 rounded-3" style="font-size: 20px;">
-                                Net Banking
-                            </button>
-                        </div>
-                        <div class="col-lg-4 mt-2">
-                            <button class="btn btn-primary w-100 rounded-3" style="font-size: 20px;">
-                                Pay in USD
-                            </button>
-                        </div>
-                        <div class="col-lg-4 mt-2">
-                            <button class="btn btn-theme w-100 rounded-3"
-                                style="font-size: 21px; border: none; background-color: #5F259F;">
-                                PhonePe
-                            </button>
-                        </div>
+                    <div>
+                        <h4 class="text-center sub-heading mt-3">Select Payment <span class="text-orange">Mode</span>
+                        </h4>
+                        <div class="row mt-3">
+                            <div class="col-lg-4 mt-2">
+                                <button class="btn btn-outline-secondary w-100 rounded-3"><img
+                                        src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png"
+                                        alt="Google-icon" style="width: 20px;"> Pay</button>
+                            </div>
+                            <div class="col-lg-4 mt-2">
+                                <button class="btn btn-theme w-100 rounded-3">
+                                    <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/upi_logo_icon_169316.png"
+                                        alt="" style="width: 60px; filter: brightness(0.5);">
+                                </button>
+                            </div>
+                            <div class="col-lg-4 mt-2">
+                                <button class="btn btn-theme w-100 rounded-3"
+                                    style="font-size: 21px; background-color: #042e6f; border: none;">
+                                    Paytm
+                                </button>
+                            </div>
+                            <div class="col-lg-4 mt-2">
+                                <button class="btn btn-success w-100 rounded-3" style="font-size: 20px;">
+                                    Credit or Debit Card
+                                </button>
+                            </div>
+                            <div class="col-lg-4 mt-2">
+                                <button class="btn btn-success w-100 rounded-3" style="font-size: 20px;">
+                                    Net Banking
+                                </button>
+                            </div>
+                            <div class="col-lg-4 mt-2">
+                                <button class="btn btn-primary w-100 rounded-3" style="font-size: 20px;">
+                                    Pay in USD
+                                </button>
+                            </div>
+                            <div class="col-lg-4 mt-2">
+                                <button class="btn btn-theme w-100 rounded-3"
+                                    style="font-size: 21px; border: none; background-color: #5F259F;">
+                                    PhonePe
+                                </button>
+                            </div>
 
+                        </div>
                     </div>
                     <!-- Payment Mode -->
 
@@ -780,7 +788,6 @@
                     <div class="border-top mt-3">
                         <img src="https://images.squarespace-cdn.com/content/v1/55aa7009e4b0f56124a0ba50/1506817918668-LNN4QGSK5FVUTXZ26AEG/norton-secured-seal-vector.png"
                             alt="Norton-con" style="width: 140px;">
-                        <img src="" alt="">
                     </div>
 
                     <!-- modal footer -->
