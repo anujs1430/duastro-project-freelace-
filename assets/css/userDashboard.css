@@ -1,6 +1,6 @@
 @import url(cart.css);
 
-.userDashboard input[type=text] {
+input[type=text] {
     border-radius: 7px;
 
 }
