@@ -506,6 +506,24 @@ input::placeholder {
 
 /*================ modal form css ================== */
 
+/* =========== Cart Item Counter ============ */
+nav .cart-counter {
+    background-color: var(--darkOrange);
+    border: 1px solid var(--darkGrey);
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 100%;
+    display: grid;
+    place-content: center;
+    font-size: 12px;
+}
+
+/* =========== Cart Item Counter ============ */
+
 
 
 
