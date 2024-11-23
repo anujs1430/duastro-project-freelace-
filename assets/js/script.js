@@ -358,3 +358,14 @@ $(".kundali-result-page .category").on("click", function () {
   $(".category").removeClass("active-orange");
   $(this).addClass("active-orange");
 });
+
+// =========JS FOR MULTI LEVEL DROPDOWN NAVBAR==========
+document.querySelectorAll(".dropdown-submenu > a").forEach(function (element) {
+  element.addEventListener("mouseover", function (e) {
+    e.preventDefault();
+    let submenu = this.nextElementSibling;
+    if (submenu) {
+      submenu.classList.toggle("show");
+    }
+  });
+});
