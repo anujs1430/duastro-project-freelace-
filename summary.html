@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Duastro - Home</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- JQUERY CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- OWL CAROUSEL -->
+
+    <link rel="stylesheet" href="assets/css/userDashboard.css">
+
+
+    <style>
+        tbody,
+        td,
+        tfoot,
+        th,
+        thead,
+        tr {
+            border-bottom: 1px solid #cecece;
+            padding: 15px 0;
+        }
+
+        th {
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        p,
+        td {
+            color: #545454;
+            font-size: 14px;
+        }
+
+
+
+        /* variables */
+        :root {
+            /* colors */
+            /* --ri5-color-primary-hsl: 242, 69%, 52%;
+            --ri5-color-bg-hsl: 0, 0%, 100%;
+            --ri5-color-contrast-high-hsl: 230, 7%, 23%;
+            --ri5-color-bg-darker-hsl: 240, 4%, 90%;
+            --ri5-color-contrast-higher-hsl: 230, 13%, 9%;
+            --ri5-color-white-hsl: 0, 0%, 100%; */
+
+            /* typography */
+            --ri5-text-sm: 0.833rem;
+
+            --radio-switch-width: 186px;
+            --radio-switch-height: 46px;
+            --radio-switch-padding: 1px;
+            --radio-switch-radius: 100vw;
+            --radio-switch-animation-duration: 0.3s;
+        }
+
+        .radio-switch {
+            position: relative;
+            display: inline-flex;
+            padding: var(--radio-switch-padding);
+            border-radius: calc(var(--radio-switch-radius) * 1.4);
+            background-color: #d6d6d6;
+        }
+
+        .radio-switch:focus-within,
+        .radio-switch:active {
+            box-shadow: 0 0 0 2px #cdcdcd;
+        }
+
+        .radio-switch__item {
+            position: relative;
+            display: inline-block;
+            height: calc(var(--radio-switch-height) - 2*var(--radio-switch-padding));
+            width: calc(var(--radio-switch-width)*0.5 - var(--radio-switch-padding));
+        }
+
+        .radio-switch__label {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            border-radius: var(--radio-switch-radius);
+            cursor: pointer;
+            font-size: var(--ri5-text-sm);
+            user-select: none;
+            transition: all var(--radio-switch-animation-duration);
+        }
+
+        .radio-switch__input:checked~.radio-switch__label {
+            color: white;
+        }
+
+        .radio-switch__input:focus~.radio-switch__label {
+            background-color: yellow;
+        }
+
+        .radio-switch__label :not(*):focus-within,
+        .radio-switch__input:focus~.radio-switch__label {
+            background-color: transparent;
+        }
+
+        .radio-switch__marker {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: -100%;
+            border-radius: var(--radio-switch-radius);
+            background-color: #fd7e14;
+            height: calc(var(--radio-switch-height) - 2*var(--radio-switch-padding));
+            width: calc(var(--radio-switch-width)*0.5 - var(--radio-switch-padding));
+            box-shadow: 0 0.9px 1.5px rgba(0, 0, 0, 0.03), 0 3.1px 5.5px rgba(0, 0, 0, 0.08), 0 14px 25px rgba(0, 0, 0, 0.12);
+            transition: -webkit-transform var(--radio-switch-animation-duration);
+            transition: transform var(--radio-switch-animation-duration);
+            transition: transform var(--radio-switch-animation-duration), -webkit-transform var(--radio-switch-animation-duration);
+        }
+
+        .radio-switch__input:checked~.radio-switch__marker {
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+        }
+
+        /* utility classes */
+        .ri5-sr-only {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(50%);
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            padding: 0;
+            border: 0;
+            white-space: nowrap;
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <header class="container top-nav">
+        <div class="d-flex justify-content-between">
+            <div class="w-50">
+                <img src="./assets/img/duastrologo.webp" alt="brand-logo" width="40%">
+            </div>
+            <div class="d-flex w-100 gap-3 justify-content-end">
+                <button type="button" class="btn btn-outline-secondary rounded-pill"><i
+                        class="bi bi-chat-dots-fill"></i>
+                    Chat with Astrologer</button>
+                <button type="button" class="btn btn-outline-secondary rounded-pill"><i
+                        class="bi bi-telephone-fill"></i>
+                    Talk with Astrologer</button>
+                <button type="button" class="btn btn-theme rounded-pill">Login</button>
+            </div>
+        </div>
+    </header>
+
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img class="brand-logo-for-sm" src="assets/img/duastrologo.webp"
+                    alt="brand-logo" width="50%"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kundali</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">MatchMaking</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            HoroScope
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="horoscorpe.html">HoroScope</a></li>
+                            <li><a class="dropdown-item" href="#">Today-horoscope</a></li>
+                            <li><a class="dropdown-item" href="#">Tomorrow-horoscope</a></li>
+                            <li><a class="dropdown-item" href="#">Yesterday-horoscope</a></li>
+                            <li><a class="dropdown-item" href="#">Weekly-horoscope</a></li>
+                            <li><a class="dropdown-item" href="#">Monthly-horoscope</a></li>
+                            <li><a class="dropdown-item" href="#">Yearly-horoscope</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Live</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Panchang</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Insta Store
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Online Pooja</a></li>
+                            <li><a class="dropdown-item" href="#">Healing</a></li>
+                            <li><a class="dropdown-item" href="#">Gemstones</a></li>
+                            <li><a class="dropdown-item" href="#">Spells</a></li>
+                            <li><a class="dropdown-item" href="#">Theta Healing</a></li>
+                            <li><a class="dropdown-item" href="#">Rudraksha</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Book a Pooja</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Calendar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tarot</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Eng
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- checkout section -->
+    <section class="checkout my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div>
+                        <h2>Order Summary</h2>
+                        <p>Please confirm that the following information is correct, and click Place Order to place
+                            your order.</p>
+                        <h4 class="mt-3">Customer Details</h4>
+                        <div class="row ps-2">
+                            <table class=" table table-bordered table-striped">
+                                <tbody>
+                                    <tr>
+                                        <th>Full Name</th>
+                                        <td>Anuj Kumar Singh</td>
+                                        <th>Phone Number</th>
+                                        <td>9876543211</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Email</th>
+                                        <td>sample@gmail.com</td>
+                                        <th>Gender</th>
+                                        <td>Male</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Birth of Date</th>
+                                        <td>12/26/2024</td>
+                                        <th>Birth of Time</th>
+                                        <td>02:00pm</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Address</th>
+                                        <td>Noidaone building,Rasoolpur Nawada, Industrial Area, sector 62</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Country</th>
+                                        <td>India</td>
+                                        <th>City</th>
+                                        <td>Noida</td>
+                                    </tr>
+                                    <tr>
+                                        <th>State</th>
+                                        <td>Uttar Pradesh</td>
+                                        <th>Postcode / Zip</th>
+                                        <td>123456</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+
+                    <div class="mt-3">
+                        <h6><b>Payment Method</b></h6>
+                        <div>
+                            <!-- <div class="d-flex align-items-center gap-2">
+                                <input type="radio" id="online_check" name="payment_method" checked=""
+                                    onchange="showCheckOutPrice()">
+                                <label for="online_check"><i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+                                    Online</label>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <input type="radio" id="payLater-box" name="payment_method"
+                                    onchange="showCheckOutPrice()">
+                                <label for="payLater-box"><i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                    COD</label>
+                            </div> -->
+
+                            <!-- <input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off"
+                                checked>
+                            <label class="btn" for="option5">Cash</label>
+
+                            <input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
+                            <label class="btn" for="option6">Online</label> -->
+
+                            <ul class="radio-switch ">
+                                <li class="radio-switch__item">
+                                    <input class="radio-switch__input ri5-sr-only" type="radio" name="radio-switch-name"
+                                        id="radio-1" value="" checked>
+                                    <label class="radio-switch__label" for="radio-1">COD</label>
+                                </li>
+
+                                <li class="radio-switch__item">
+                                    <input class="radio-switch__input ri5-sr-only" type="radio" name="radio-switch-name"
+                                        id="radio-2" value="">
+                                    <label class="radio-switch__label" for="radio-2">Online</label>
+                                    <div aria-hidden="true" class="radio-switch__marker"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-theme rounded-2 fs-6" onclick="proceedToCheckout()">Place Order</button>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="card">
+                        <div class="p-3">
+                            <h5 class="m-0">Your Cart Details</h5>
+                        </div>
+                        <div class="card-body p-3">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th width="50%">Item</th>
+                                        <th>Price</th>
+                                        <th>Qty</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cartitem">
+                                    <tr>
+                                        <td>
+                                            The Lot(Small 9) <div></div>
+                                            <div>
+
+
+
+                                            </div>
+                                        </td>
+                                        <td>$12.5</td>
+                                        <td>10</td>
+                                        <td>$125</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Margherita(Small 9) <div></div>
+                                            <div>
+
+
+
+                                            </div>
+                                        </td>
+                                        <td>$12.5</td>
+                                        <td>11</td>
+                                        <td>$137.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Patate(Small 9) <div></div>
+                                            <div>
+
+
+
+                                            </div>
+                                        </td>
+                                        <td>$12.5</td>
+                                        <td>1</td>
+                                        <td>$12.5</td>
+                                    </tr>
+                                </tbody>
+
+                                <tfoot>
+                                    <input type="hidden" id="coupon" value="0">
+                                    <input type="hidden" id="coupon_code_enter" value="">
+                                    <input type="hidden" id="comm" value="3">
+                                    <input type="hidden" id="comm_num" value="8.25">
+                                    <input type="hidden" id="gst_num" value="25.75">
+                                    <input type="hidden" id="subTotalgrand" value="283.25">
+
+                                    <tr id="coupon_discount_section" style="display: none;">
+                                        <th colspan="3">Coupon</th>
+                                        <th class="text-right">-<span id="coupon_discount"
+                                                style="display: none;">$0.00</span>
+                                        </th>
+                                    </tr>
+                                    <tr id="platformSection">
+                                        <th colspan="3">Platform Fee</th>
+                                        <th class="text-right"><span id="platform_price">$8.25</span>
+                                        </th>
+                                    </tr>
+                                    <tr id="final_gst_tax" style="">
+                                        <th colspan="3">GST (10%)</th>
+                                        <th class="text-right"><span id="final_gst_tax_amount">$25.75</span>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="3">Total</th>
+                                        <th id="subTotalSpanc">$283.25</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- checkout section -->
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <h4>Horoscope 2024</h4>
+                    <ul class="mt-3">
+                        <li><a href="#">Links</a></li>
+                        <li><a href="#">Links</a></li>
+                        <li><a href="#">Links</a></li>
+                        <li><a href="#">Links</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <div>
+                        <h4>Important Links</h4>
+                        <ul class="mt-3">
+                            <li><a href="#">Links</a></li>
+                            <li><a href="#">Links</a></li>
+                            <li><a href="#">Links</a></li>
+                            <li><a href="#">Links</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div>
+                        <h4>Important Links</h4>
+                        <ul class="mt-3">
+                            <li><a href="#">Links</a></li>
+                            <li><a href="#">Links</a></li>
+                            <li><a href="#">Links</a></li>
+                            <li><a href="#">Links</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div>
+                        <h4>Useful Links</h4>
+                        <ul class="mt-3">
+                            <li><a href="#">Links</a></li>
+                            <li><a href="#">Links</a></li>
+                            <li><a href="#">Links</a></li>
+                            <li><a href="#">Links</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <h4>Contact Us</h4>
+                        <ul class="mt-3">
+                            <li><b>Phone:</b> <a href="callto:9000000000">+91 9000000000</a></li>
+                            <li><b>What'sApp:</b> <a href="callto:9000000000">+91 9000000000</a></li>
+                            <li><b>Email:</b> <a href="mailto:abc@smaple.com">abc@smaple.com</a></li>
+                        </ul>
+                        <div class="d-flex gap-3 text-yellow">
+                            <i class="bi bi-linkedin"></i>
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3 mt-3" style="background-color: #2a2a2a;">
+            <h6 class="mb-0">All copyright @2024 reserve at <a href="#">Astrologer</a> </h6>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
